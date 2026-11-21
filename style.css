@@ -1,0 +1,410 @@
+/* =========================================
+   Atelier Nagasawa — Jade Kang 亢玉
+   Minimalist French Gallery Archive CSS
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --text-main: #181818;
+  --text-muted: #6e6e6e;
+  --border-light: #e8e8e8;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+a:hover {
+  opacity: 0.55;
+}
+
+/* 顶部导航栏 */
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 42px 48px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand h1 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.brand span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+nav a.active {
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 3px;
+}
+
+/* 主体容器 */
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 40px 48px 100px;
+}
+
+/* 首页：双联画视觉网关 */
+.diptych-container {
+  max-width: 960px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.diptych-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.diptych-item {
+  display: block;
+  position: relative;
+}
+
+.diptych-item img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  display: block;
+}
+
+.diptych-label {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-caption {
+  margin-top: 36px;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* 系列导言与排版 */
+.page-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.series-meta {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+
+.intention-text {
+  max-width: 680px;
+  margin-bottom: 64px;
+  font-size: 19px;
+}
+
+.intention-text p {
+  margin-bottom: 18px;
+}
+
+/* 摄影画廊网格 */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 36px;
+  align-items: center;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-item.wide {
+  grid-column: span 2;
+}
+
+.caption-num {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* 绘画作品与收藏展签 */
+.artwork-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+.artwork-row img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+.artwork-info h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.artwork-medium {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.artwork-dim {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.acquisition-box {
+  border-top: 1px solid var(--border-light);
+  padding-top: 18px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.inquiry-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 2px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* 随笔与简历双栏 */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.section-kicker {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.portrait-img {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.bio-block p, .notes-block p {
+  margin-bottom: 18px;
+}
+
+.contact-list {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 2.1;
+  color: var(--text-muted);
+}
+
+/* 极简页脚与 Newsletter 订阅 */
+footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 48px 60px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  border: none;
+  border-bottom: 1px solid var(--text-muted);
+  padding: 6px 4px;
+  font-family: var(--sans);
+  font-size: 12px;
+  outline: none;
+  width: 220px;
+  background: transparent;
+}
+
+.newsletter-form button {
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--text-main);
+  padding: 6px 0;
+}
+
+/* 手机端自适应 */
+@media (max-width: 768px) {
+  header, main, footer { padding-left: 24px; padding-right: 24px; }
+  .diptych-grid, .photo-grid, .artwork-row, .editorial-grid { grid-template-columns: 1fr; }
+  .photo-item.wide { grid-column: span 1; }
+  .diptych-item img { height: 400px; }
+}
+
+/* =========================================
+   Contact & Newsletter Page Additions
+   ========================================= */
+
+.contact-details {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 2;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contact-details strong {
+  color: var(--text-main);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.minimal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 420px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 2px;
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--text-main);
+  background: transparent;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--text-main);
+}
+
+.minimal-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--text-main);
+  padding: 6px 0;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.25s ease;
+}
+
+.minimal-btn:hover {
+  opacity: 0.55;
+}

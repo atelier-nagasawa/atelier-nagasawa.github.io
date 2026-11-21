@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Newsletter — Atelier Nagasawa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1><a href="index.html">Atelier Nagasawa</a></h1>
+      <span>Jade Kang · 亢玉</span>
+    </div>
+    <nav>
+      <a href="photographie.html">Photographie</a>
+      <a href="peinture.html">Peinture &amp; Dessin</a>
+      <a href="propos.html">Écrits &amp; À propos</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="editorial-grid">
+      <!-- 左栏：工作室联络信息与直接留言 -->
+      <div class="contact-column">
+        <div class="section-kicker">Atelier &amp; Contact</div>
+        <h2 class="page-title" style="font-size: 28px;">Écrire à l'atelier</h2>
+        <div class="series-meta">Expositions · Acquisitions · Collaborations</div>
+
+        <p style="margin-bottom: 28px;">
+          Pour toute demande d'information concernant les œuvres disponibles, les éditions d'art ou un projet d'exposition, vous pouvez contacter directement l'atelier.
+        </p>
+
+        <div class="contact-details">
+          <strong>Atelier Nagasawa — Jade Kang</strong><br>
+          Courbevoie, Hauts-de-Seine (92), France<br><br>
+          Email : <a href="mailto:atelier.nagasawa@gmail.com">atelier.nagasawa@gmail.com</a><br>
+          Instagram : <a href="https://instagram.com/fotoroughedges" target="_blank">@fotoroughedges</a><br>
+          Artiste-auteur SIRET : 998 945 539 00018
+        </div>
+
+        <!-- 极简网页直接发信表单（初期可通过 mailto 或免费表单服务 Formspree 接收） -->
+        <form class="minimal-form" action="mailto:atelier.nagasawa@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Nom / Institution</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="sender-email">Email</label>
+            <input type="email" id="sender-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="minimal-btn">Envoyer le message →</button>
+        </form>
+      </div>
+
+      <!-- 右栏：Newsletter 工作室通讯订阅 -->
+      <div class="newsletter-column">
+        <div class="section-kicker">Newsletter</div>
+        <h2 class="page-title" style="font-size: 28px;">Lettres de l'atelier</h2>
+        <div class="series-meta">Carnets · Nouvelles séries · Invitations</div>
+
+        <p style="margin-bottom: 20px;">
+          Quelques fois par an, au rythme des saisons et des projets, j'envoie une lettre depuis l'atelier : nouvelles séries photographiques, dessins en cours, textes courts et invitations aux expositions.
+        </p>
+        <p style="margin-bottom: 36px; font-style: italic; color: var(--text-muted);">
+          Sans algorithme, sans bruit — uniquement lorsque quelque chose mérite d'être partagé.
+        </p>
+
+        <!-- 订阅表单（注册 Buttondown 或 Substack 后，只需把 action 替换为他们提供的专属链接即可自动收集名单） -->
+        <form class="minimal-form" action="mailto:atelier.nagasawa@gmail.com?subject=Inscription%20Lettres%20de%20l'atelier" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="sub-email">Votre adresse email</label>
+            <input type="email" id="sub-email" name="email" placeholder="nom@exemple.com" required>
+          </div>
+          <button type="submit" class="minimal-btn">S'inscrire aux lettres →</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© Atelier Nagasawa — Jade Kang · Courbevoie, France</div>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+</body>
+</html>

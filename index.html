@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Nagasawa — Jade Kang 亢玉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1><a href="index.html">Atelier Nagasawa</a></h1>
+      <span>Jade Kang · 亢玉</span>
+    </div>
+    <nav>
+      <a href="photographie.html">Photographie</a>
+      <a href="peinture.html">Peinture &amp; Dessin</a>
+      <a href="propos.html">Écrits &amp; À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="diptych-container">
+      <div class="diptych-grid">
+        <!-- 左侧点击进入摄影专页 -->
+        <a href="photographie.html" class="diptych-item">
+          <img src="images/photo-07.jpg" alt="Couleurs sur Marie — Photographie">
+          <span class="diptych-label">I. Photographie →</span>
+        </a>
+        <!-- 右侧点击进入绘画专页 -->
+        <a href="peinture.html" class="diptych-item">
+          <img src="images/dessin-04.jpg" alt="Couleurs sur Marie — Dessin sur papier">
+          <span class="diptych-label">II. Peinture &amp; Dessin →</span>
+        </a>
+      </div>
+      <p class="hero-caption">
+        « Couleurs sur Marie » — Photographie et dessin sur papier, 2025. L'art et la vie ne se séparent pas.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© Atelier Nagasawa — Jade Kang · Courbevoie, France · SIRET 998 945 539 00018</div>
+    <!-- 未来接入 Buttondown 或 Substack 后替换 action 链接即可 -->
+    <form class="newsletter-form" action="mailto:atelier.nagasawa@gmail.com?subject=Inscription%20Newsletter" method="post" enctype="text/plain">
+      <label for="email">Lettres de l'atelier :</label>
+      <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </footer>
+
+</body>
+</html>
